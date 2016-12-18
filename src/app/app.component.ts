@@ -2,21 +2,10 @@ import { Component, ViewChild } from '@angular/core';
 import { Platform, MenuController, Nav,Events } from 'ionic-angular';
 import { Network,StatusBar, Splashscreen } from 'ionic-native';
 import { EntertainmentPage } from '../pages/entertainment/entertainment';
-import { TravelPage } from '../pages/travel/travel';
-import { BuyAndSellPage } from '../pages/buyandsell/buyandsell';
-import { JobsPage } from '../pages/jobs/jobs';
-import { ServicesPage } from '../pages/services/services';
-import { TabsPage } from '../pages/tabs/tabs';
+import { HomePage } from '../pages/tabs/home';
 import { DataService } from '../shared/dataservice';
 import { CategoryMappingsService } from '../shared/categoryMappingService'
-export interface PageInterface {
-title: string;
-component: any;
-icon: string;
-logsOut?: boolean;
-index?: number;
-}
-
+import {PageInterface} from '../shared/interfaces'
 @Component({
   templateUrl: 'app.html'
 })
@@ -24,7 +13,7 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   // make TabsPage the root (or first) page
-  rootPage: any = TabsPage;
+  rootPage: any = HomePage;
   constructor(
     public platform: Platform,
     public menu: MenuController,
@@ -37,7 +26,7 @@ export class MyApp {
 
     // set our app's pages
     appPages: PageInterface[] = [
-            {title: "Home" ,component:TabsPage,icon: './assets/img/GnjSKTMQQOm7L7HetVtR_house_icon_colored.jpg'},
+            {title: "Home" ,component:HomePage,icon: './assets/img/GnjSKTMQQOm7L7HetVtR_house_icon_colored.jpg'},
             {title: 'Entertainment',component:EntertainmentPage,index: 1,icon: './assets/img/If0y1AnoQi6lq7eWzdq9_movie.jpg'},
             {title: 'Travel',component:EntertainmentPage,index: 2,icon: './assets/img/ZSBHPs7TgewFHKBeS9fQ_plane-travel-flight-tourism-travel-icon-png-10.png'},
             {title: 'Buy and sell',component:EntertainmentPage,index: 3,icon: './assets/img/c1Uesyy3RiWje8bJ1Nps_Buy_Sell_Transparent.png'},

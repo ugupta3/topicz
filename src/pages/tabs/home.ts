@@ -5,9 +5,9 @@ import { TopiczPage } from '../topicz/topicz';
 
 @Component({
   selector: 'tabs-ui',
-  templateUrl: 'tabs.html'
+  templateUrl: 'home.html'
 })
-export class TabsPage {
+export class HomePage {
   tab1Root = TopiczPage;
   tab2Root = ConnectzTab;
   tab3Root = ProfilePage;

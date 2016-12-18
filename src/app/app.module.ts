@@ -3,17 +3,13 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { EntertainmentPage } from '../pages/entertainment/entertainment';
 import { ProfilePage } from '../pages/profile/profile';
-import { TravelPage } from '../pages/travel/travel';
-import { BuyAndSellPage } from '../pages/buyandsell/buyandsell';
-import { JobsPage } from '../pages/jobs/jobs';
-import { ServicesPage } from '../pages/services/services';
 import { ConnectzTab } from '../pages/connectz/connectz';
 import { TopiczPage } from '../pages/topicz/topicz';
 import { PostPage } from '../pages/post/post';
 import { PostDetailPage } from '../pages/postdetailpage/postdetailpage';
 import { CatogeryPage } from '../pages/catogery/catogery';
 import { PostsData } from '../providers/posts-data';
-import { TabsPage } from '../pages/tabs/tabs';
+import { HomePage } from '../pages/tabs/home';
 // Custom components
 import { TopicComponent } from '../shared/components/topic.component';
 import { UserAvatarComponent } from '../shared/components/user-avatar.component';
@@ -28,16 +24,12 @@ import { ResponseCreatePage } from '../pages/respondcreate/responsecreate'
     MyApp,
     EntertainmentPage,
     ProfilePage,
-    TravelPage,
-    JobsPage,
-    BuyAndSellPage,
-    ServicesPage,
     ConnectzTab,
     TopiczPage,
     PostPage,
     PostDetailPage,
     CatogeryPage,
-    TabsPage,
+    HomePage,
     ResponseCreatePage,
     TopicComponent,
     UserAvatarComponent
@@ -50,16 +42,12 @@ import { ResponseCreatePage } from '../pages/respondcreate/responsecreate'
     MyApp,
     EntertainmentPage,
     ProfilePage,
-    TravelPage,
-    JobsPage,
-    BuyAndSellPage,
-    ServicesPage,
     ConnectzTab,
     TopiczPage,
     PostPage,
     PostDetailPage,
     CatogeryPage,
-    TabsPage,
+    HomePage,
     ResponseCreatePage
   ],
   providers: [PostsData,APP_PROVIDERS,{ provide: ErrorHandler, useClass: IonicErrorHandler }]
