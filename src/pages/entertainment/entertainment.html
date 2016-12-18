@@ -1,0 +1,39 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-row no-padding>
+        <!--<ion-col text-left>-->
+            <ion-title>{{categoryTitle}}</ion-title>
+        <!--</ion-col>-->
+        <ion-col text-right>
+            <button ion-button clear small color="light" icon-right (click)="openCatogeryPage()">
+                <ion-icon name='add-circle'></ion-icon>
+            </button>
+        </ion-col>
+        </ion-row>
+    </ion-navbar>
+
+
+</ion-header>
+
+<ion-content>
+<ion-toolbar no-border-top>
+    <ion-searchbar light [(ngModel)]="queryText" (ionInput)="searchThreads()"
+     placeholder="Search for a topic..">
+    </ion-searchbar>
+  </ion-toolbar>
+
+  <ion-list *ngIf="!loading" >
+    <forum-topic *ngFor="let topic of topics " [topic]="topic"
+     (onViewComments)="handleClickEvent(topic)">
+    </forum-topic>
+  </ion-list>
+
+  <ion-infinite-scroll (ionInfinite)="fetchNextThreads($event)"
+   threshold="10px" *ngIf="(start > 0) && (queryText.trim().length == 0)
+    && segment=='all' && internetConnected">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>

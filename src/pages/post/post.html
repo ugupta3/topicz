@@ -1,0 +1,47 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>New Response</ion-title>
+        <ion-buttons start>
+          <button ion-button (click)="cancelPost()" >
+          <ion-icon ios="ios-close"  md="md-close"></ion-icon>
+          </button>
+</ion-buttons>
+
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="past-page">
+    <form #postForm="ngForm" (ngSubmit)="createTopic(postForm)" >
+
+        <ion-item>
+            <ion-label stacked color="primary">Subject</ion-label>
+            <ion-input [(ngModel)]="topic.subject" name="subject" type="text" #subject="ngModel" required>
+            </ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label stacked color="primary">Description</ion-label>
+            <ion-input [(ngModel)]="topic.description" name="description" type="text" #description="ngModel" required>
+            </ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label stacked color="primary">Tags</ion-label>
+            <ion-input [(ngModel)]="topic.tagz" name="tagz" type="text" #tagz="ngModel">
+            </ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label stacked color="primary">MilesAway</ion-label>
+            <ion-range min="5" max="50" [(ngModel)]="topic.milesAway"
+                       name="milesAway"
+                       #milesAway="ngModel" color="secondary" pin="true">
+                <ion-label range-left>5</ion-label>
+                <ion-label range-right>50</ion-label>
+            </ion-range>
+        </ion-item>
+
+        <button ion-button type="submit">Submit</button>
+    </form>
+
+</ion-content>

@@ -1,0 +1,16 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Select {{title }} Category</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding="true" class="has-header">
+    <ion-list radio-group [(ngModel)]="relationship">
+        <ion-item *ngFor="let c of categories">
+            <ion-label>{{c.name}}</ion-label>
+            <ion-radio value = {{c.value}}
+                       checked = {{c.checked}}
+                       (click)="openPostPage(c.value)"></ion-radio>
+        </ion-item>
+    </ion-list>
+</ion-content>

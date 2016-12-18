@@ -1,0 +1,72 @@
+// http://ionicframework.com/docs/v2/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+button img {
+  position: absolute;
+    top: 10px;
+    left: 16px;
+    max-width: 40px;
+    max-height: 40px;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;  
+    }
+
+button h2{ 
+  padding-left: 55px;
+  min-height: 30px; 
+}
+
+.ion-item > img:first-child {
+  position: absolute;
+    top: 16px;
+    left: 16px;
+    max-width: 40px;
+    max-height: 40px;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%; 
+}
+
+.tabs .tab-item .icon.mcfly {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  height: 100%;
+  background-image: url('https://raw.github.com/driftyco/ionic-site/gh-pages/img/docs/mcfly.jpg');
+  background-size:contain;
+}
+
+$toolbar-background : #0087be;
+//$list-background-color : white;
+$card-ios-background-color: #f4f4f4;
+$card-md-background-color: #f4f4f4;
+$card-wp-background-color: #f4f4f4;
+scroll-content { background-color: whitesmoke;}
+ion-list .item .item-inner {
+    background: whitesmoke;
+}
+.item {
+    background-color: whitesmoke !important;
+}
+
+ion-card {
+    background: white !important;
+}
+
+.left-border-primary {
+    border-left: 4px solid #0087be;
+}
+

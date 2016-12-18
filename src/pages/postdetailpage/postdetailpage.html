@@ -1,0 +1,40 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Topic Detail</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-item-divider sticky>
+        <ion-label>
+            {{topic.subject}}
+        </ion-label>
+    </ion-item-divider>
+
+
+    <ion-item class="item-avatar item-icon-right">
+        <img src="./assets/img/If0y1AnoQi6lq7eWzdq9_movie.jpg" class="post-detail-image">
+        <h3>{{topic.description}}</h3>
+        <p>
+            {{topic.user.username   }}
+             {{topic.dateCreated | date:'yyyy-MM-dd HH:mm:ss'}}
+             {{topic.milesAway}}
+        </p>
+    </ion-item>
+
+    <button ion-button round color="Respond" (click)="openResponsePage()">
+        Respond
+    </button>
+    <br>
+    <b>Responses:</b> <br> <br>
+    <ion-item-group *ngFor="let response of topic.topicResponses" >
+
+        <h3>{{response.text}}</h3>
+        <p>
+            {{response.dateCreated | date:'yyyy-MM-dd HH:mm:ss'}}
+            {{response.user.username  }}:
+            {{response.milesAway }}
+        </p>
+     </ion-item-group>
+
+</ion-content>

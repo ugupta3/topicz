@@ -1,0 +1,31 @@
+<ion-item text-wrap>
+    <ion-card>
+
+        <ion-item>
+            <ion-avatar item-left>
+                <forum-user-avatar [user]="topic.user"></forum-user-avatar>
+            </ion-avatar>
+            <h2>{{topic.user.username}}</h2>
+            <p>{{topic.dateCreated | date:'medium'}}</p>
+        </ion-item>
+
+        <!--<img src="img/advance-card-bttf.png">-->
+        <div class="thread-card-title wordwrap">
+            {{topic.subject}}
+        </div>
+        <div class="thread-card-question wordwrap left-border-primary">
+            {{topic.description}}
+        </div>
+        <ion-row class="left-border-primary">
+            <ion-col>
+      <ion-icon name="text" id="respondBtn" ></ion-icon>
+        <!--<div>{{topic.responses}} Responses</div>-->
+            </ion-col>
+            <ion-col center text-center>
+                <ion-note>
+                    {{topic.category}}
+                </ion-note>
+            </ion-col>
+        </ion-row>
+    </ion-card>
+</ion-item>

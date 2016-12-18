@@ -1,0 +1,17 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>New Response</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <form #respondForm="ngForm" (ngSubmit)="createRespond(respondForm)" >
+      <ion-item>
+          <ion-label stacked color="primary">Response</ion-label>
+          <ion-input [(ngModel)]="response.text" name="responseText"
+          type="text" #responseText="ngModel" required >
+          </ion-input>
+      </ion-item>
+        <button ion-button type="submit">Submit</button>
+    </form>
+</ion-content>

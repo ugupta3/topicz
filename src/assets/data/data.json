@@ -1,0 +1,50 @@
+{
+      "entertainmentPosts": [
+        {
+          "subject": "Review for Bahubali movie",
+          "profilePic": "/assets/img/If0y1AnoQi6lq7eWzdq9_movie.jpg",
+          "description": "Please share the Review for Bahubali movie",
+          "createdBy": "Vamshi N",
+          "createdAt": "2016-12-03",
+          "milesAway": "6 mi. away",
+          "numberOfResponses": "09",
+          "responses": [
+            {
+              "response": "Bahubali is osum. it is a must watch",
+              "createdBy": "user-1",
+              "createdAt": "2016-12-03",
+              "milesAway": "6 mi. away"
+            },
+            {
+              "response": "Bahubali is an avg film with full of CGI work. nothing else ;)",
+              "createdBy": "user-2",
+              "createdAt": "2016-12-03",
+              "milesAway": "6 mi. away"
+            }
+          ]
+        },
+        {
+          "subject": "Tickets for movie Bahubali @ Nizampet",
+          "profilePic": "/assets/img/If0y1AnoQi6lq7eWzdq9_movie.jpg",
+          "description": "Any tickets available for movie Bahubali @ Nizampet?",
+          "createdBy": "Uma",
+          "createdAt": "2016-12-03",
+          "milesAway": "11 mi. away",
+          "numberOfResponses": "05",
+          "responses": [
+            {
+              "response": "It is to late man.. tickets are already booked",
+              "createdBy": "user-3",
+              "createdAt": "2016-12-03",
+              "milesAway": "6 mi. away"
+            },
+            {
+              "response": "Yes. But I dont think you can afford them :P",
+              "createdBy": "user-4",
+              "createdAt": "2016-12-03",
+              "milesAway": "6 mi. away"
+            }
+          ]
+        }
+      ]
+}
