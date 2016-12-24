@@ -1,3 +1,29 @@
 .icon {
    font-size: 30px;
+   padding-right: 10px;
+   padding-left: 10px;
 }
+.topic-card-subject {
+    font-size: 50px;
+    width: 100%;
+    font-weight: bold;
+    color: black;
+    text-align: left
+  }
+.topic-card-question {
+    font-size: 1.0em;
+    width: 100%;
+    padding: 0 10px 0 12px;
+    margin-top: 7px;
+    color: grey;
+  }
+  .cart-item{
+   background-color: blue;
+
+
+  }
+  .ion-col{
+  padding-left: 0px;
+  margin-right: 0px;
+
+  }
