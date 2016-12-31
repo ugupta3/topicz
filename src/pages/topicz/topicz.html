@@ -1,55 +1,24 @@
-<ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Topicz</ion-title>
-  </ion-navbar>
-</ion-header>
+<ion-content padding has-bouncing="false">
+  <ion-segment color="dark">
+  <ion-segment-button style="border:none;" *ngFor="let p of appPages;let i = index" (click)="select(i)"
+   [ngClass]="{SKactiveSegment: selected===i}" >
+<h2>{{p.title}}</h2>
+</ion-segment-button>
+</ion-segment>
 
-  <ion-content padding="true" class="has-header">
-    <ion-searchbar>
-            [showCancelButton]="shouldShowCancel"
-            (ionInput)="onInput($event)"
-            (ionCancel)="onCancel($event)">
-    </ion-searchbar>
+<div id='indicator' class="indicatorSegment">
+</div>
 
-    <h3 id="topicz-heading3" style="color:#000000;">Entertainment</h3>
-    <ion-list id="topicz-list18">
-      <ion-item class="item-avatar" id="topicz-list-item56" ui-sref="tabsController.topic2">
-        <img src="./assets/img/If0y1AnoQi6lq7eWzdq9_movie.jpg">
-        <h2>are there tickets available for</h2>
-        <p style="white-space:normal;">Bahubhali 2 at IMAX ,@necklace road</p>
-      </ion-item>
-      <ion-item class="item-avatar" id="topicz-list-item57">
-        <img src="img/EGKgylfSlOa9J9jE06Yt_sports.jpg">
-        <h2>Ind vs Iran</h2>
-        <p style="white-space:normal;">World cup Kabaddi</p>
-      </ion-item>
+<ion-toolbar no-border-top>
+  <ion-searchbar light [(ngModel)]="queryText" (ionInput)="searchThreads()" placeholder="Search for a topic..">
+  </ion-searchbar>
+</ion-toolbar>
+<ion-slides (pan)="panEvent($event)" #mySlider (ionDrag)="onSlideChanged($event)" [options]="mySlideOptions">
+  <ion-slide *ngFor="let p of appPages;let i = index">
+    <ion-list *ngIf="!loading">
+      <forum-topic *ngFor="let j = index;let topic of topics[j]" [topic]="topic" (onViewComments)="handleClickEvent(topic)">
+      </forum-topic>
     </ion-list>
-    <h3 id="topicz-heading4" style="color:#000000;">Travel</h3>
-    <ion-list id="topicz-list19">
-      <ion-item class="item-avatar" id="topicz-list-item58">
-        <img src="img/P7jHTyAzTiOQ7qyrequ7_traffic_signal.jpg">
-        <h2>How is traffic @JNTU Signal ?</h2>
-        <p style="white-space:normal;">Respond</p>
-      </ion-item>
-      <ion-item class="item-avatar" id="topicz-list-item59">
-        <img src="img/iG3e0o0XRpymz21vvTRq_indian-railway.jpg">
-        <h2>CHARMINAR EXPRESS</h2>
-        <p style="white-space:normal;">Travelling to Chennai from Hyderabad</p>
-      </ion-item>
-      <ion-item class="item-avatar" id="topicz-list-item60">
-        <img src="img/zQ9lqtTiTKSK0ppSBTf8_apsrtc.jpg">
-        <h2>HYD-&gt;VJW SVN 1120</h2>
-        <p style="white-space:normal;">Travelling to Vijayawada from hyderabad</p>
-      </ion-item>
-
-    </ion-list>
-
-    <ion-row no-padding>
-      <button ion-button round (click)="openCatogeryPage()">
-        Create your own Post
-      </button>
-    </ion-row>
-  </ion-content>
+    </ion-slide>
+</ion-slides>
+</ion-content>

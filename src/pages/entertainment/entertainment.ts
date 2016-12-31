@@ -32,12 +32,12 @@ export class EntertainmentPage {
     this.category=navParams.data.parentCategory;
     this.categoryTitle=categoryMappingsService.getTitleForCategory(this.category);
     this.queryText="Search topic like movies, events,jobs etc"
-    this.loadTopics();
+   // this.loadTopics();
   }
 
 ionViewDidLoad() {
     this.app.setTitle('Entertainment Posts');
-    
+    this.loadTopics();
   }
 
   loadTopics() {

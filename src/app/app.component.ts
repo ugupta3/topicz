@@ -22,6 +22,7 @@ export class MyApp {
     public categoryMappingsService:CategoryMappingsService
   ) {
     this.initializeApp();
+   
   }
 
     // set our app's pages
